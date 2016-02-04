@@ -1,0 +1,26 @@
+{
+        "metadata": {
+            "properties": {
+				"uuid": {"type": "string", "index": "not_analyzed"},
+				"userId": {"type": "string", "index": "no"},
+				"date": {
+                    "type":  "date", "format": "date_hour_minute_second_millis"
+                },
+				"classification" : {"type": "string", "index": "no"},
+				"numericKeyValue" : {
+					"type" : "nested",
+					"properties" : {
+						"key" : {"type" : "string"},
+						"value" : {"type" : "double"}
+					}
+				},
+				"textKeyValue" : {
+					"type" : "nested",
+					"properties" : {
+						"key" : {"type" : "string"},
+						"value" : {"type" : "string"}
+					}
+				}
+            }
+        }
+}
