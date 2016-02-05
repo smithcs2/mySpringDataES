@@ -1,4 +1,4 @@
-package piazza.services.ingest.model;
+package piazza.services.search.model;
 
 import java.util.Date;
 import java.util.List;

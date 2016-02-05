@@ -1,4 +1,4 @@
-package piazza.services.ingest.model;
+package piazza.services.search.model;
 
 import java.io.IOException;
 import java.util.ArrayList;

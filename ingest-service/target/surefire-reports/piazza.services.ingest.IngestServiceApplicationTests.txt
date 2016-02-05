@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: piazza.services.ingest.IngestServiceApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.448 sec - in piazza.services.ingest.IngestServiceApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.144 sec - in piazza.services.ingest.IngestServiceApplicationTests
