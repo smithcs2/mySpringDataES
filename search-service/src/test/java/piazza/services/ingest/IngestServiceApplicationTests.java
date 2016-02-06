@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import org.elasticsearch.common.geo.GeoPoint;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class IngestServiceApplicationTests {
 	{
 		Metadata data = new Metadata();
 		data.setUuid(UUID.randomUUID().toString());
-		data.setUserId("rshultz");
+		data.setUserId("csmith");
 		data.setDate(new Date());
 		data.setClassification("Unclassified");
 		List<NumericKeyValue> numerics = new ArrayList<NumericKeyValue>();
@@ -38,6 +39,8 @@ public class IngestServiceApplicationTests {
 		List<TextKeyValue> text = new ArrayList<TextKeyValue>();
 		text.add(new TextKeyValue("comment", "testing 1.. 2.. 3.."));
 		data.setTextKeyValue(text);
+		
+		//changed to list 2/6  CSS     data.setLocationPoint(new GeoPoint(44.0, -122.95));
 		repository.save(data);
 		System.out.println("Hello World"+"/n"+repository.toString());
 	}

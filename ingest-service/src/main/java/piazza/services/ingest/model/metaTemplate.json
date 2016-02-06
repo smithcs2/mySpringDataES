@@ -24,7 +24,6 @@
 				"locationPoint": {
          			"type": "geo_point"
         		}
-				
             }
         }
 }

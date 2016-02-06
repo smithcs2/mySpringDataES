@@ -20,7 +20,10 @@
 						"key" : {"type" : "string"},
 						"value" : {"type" : "string"}
 					}
-				}
+				},
+				"locationPoint": {
+         			"type": "geo_point"
+        		}
             }
         }
 }

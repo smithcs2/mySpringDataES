@@ -2,6 +2,7 @@ package piazza.services.search.repository;
 
 import java.util.List;
 
+import org.elasticsearch.common.geo.GeoPoint;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 import piazza.services.search.model.Metadata;
@@ -9,6 +10,7 @@ import piazza.services.search.model.Metadata;
 public interface MetadataRepository extends ElasticsearchRepository<Metadata, String> {
 
 	List<Metadata> findByUserId(String userId);
+	List<Metadata> findByLocationPoint(GeoPoint locationPoint);
 	
 //	Documentation for reference:
 //	

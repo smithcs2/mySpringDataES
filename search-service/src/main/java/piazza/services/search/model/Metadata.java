@@ -3,6 +3,7 @@ package piazza.services.search.model;
 import java.util.Date;
 import java.util.List;
 
+import org.elasticsearch.common.geo.GeoPoint;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -30,6 +31,11 @@ public class Metadata {
 	@JsonDeserialize(using = TextKeyValueJsonDeserializer.class)
 	private List<TextKeyValue> textKeyValue;
 	
+	@Field(type = FieldType.Nested)
+	@JsonDeserialize(using = LocationPointJSONDeserializer.class)
+	//private GeoPoint locationPoint;
+	private List<LocationPointValue> locationPointValueList;
+
 	public String getId() {
 		return id;
 	}
@@ -72,4 +78,18 @@ public class Metadata {
 	public void setTextKeyValue(List<TextKeyValue> textKeyValue) {
 		this.textKeyValue = textKeyValue;
 	}
+	
+	public List<LocationPointValue> getLocationPointValueList() {
+		return locationPointValueList;
+	}
+	public void setLocationPointValueList(List<LocationPointValue> locationPointValueList) {
+		this.locationPointValueList = locationPointValueList;
+	}
+/*	public GeoPoint getLocationPoint() {
+		return locationPoint;
+	}
+	public void setLocationPoint(GeoPoint locationPoint) {
+		this.locationPoint = locationPoint;
+	}
+	*/
 }
