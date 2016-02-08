@@ -40,7 +40,9 @@ public class IngestServiceApplicationTests {
 		text.add(new TextKeyValue("comment", "testing 1.. 2.. 3.."));
 		data.setTextKeyValue(text);
 		
-		//changed to list 2/6  CSS     data.setLocationPoint(new GeoPoint(44.0, -122.95));
+		//changed to list 2/6  CSS try as elementary data type access again 2/8
+		//data.setLocationPoint(new GeoPoint(44.0, -122.95));
+		data.setLocationPoint(new GeoPoint(44.0, -122.95));
 		repository.save(data);
 		System.out.println("Hello World"+"/n"+repository.toString());
 	}

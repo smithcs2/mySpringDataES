@@ -31,11 +31,13 @@ public class Metadata {
 	@JsonDeserialize(using = TextKeyValueJsonDeserializer.class)
 	private List<TextKeyValue> textKeyValue;
 	
+	private GeoPoint locationPoint;
+	/*
 	@Field(type = FieldType.Nested)
 	@JsonDeserialize(using = LocationPointJSONDeserializer.class)
-	//private GeoPoint locationPoint;
 	private List<LocationPointValue> locationPointValueList;
-
+*/
+	
 	public String getId() {
 		return id;
 	}
@@ -79,17 +81,17 @@ public class Metadata {
 		this.textKeyValue = textKeyValue;
 	}
 	
-	public List<LocationPointValue> getLocationPointValueList() {
+/*	public List<LocationPointValue> getLocationPointValueList() {
 		return locationPointValueList;
 	}
 	public void setLocationPointValueList(List<LocationPointValue> locationPointValueList) {
 		this.locationPointValueList = locationPointValueList;
 	}
-/*	public GeoPoint getLocationPoint() {
+	*/
+	public GeoPoint getLocationPoint() {
 		return locationPoint;
 	}
 	public void setLocationPoint(GeoPoint locationPoint) {
 		this.locationPoint = locationPoint;
 	}
-	*/
 }

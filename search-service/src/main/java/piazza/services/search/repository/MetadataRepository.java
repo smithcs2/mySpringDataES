@@ -11,6 +11,7 @@ public interface MetadataRepository extends ElasticsearchRepository<Metadata, St
 
 	List<Metadata> findByUserId(String userId);
 	List<Metadata> findByLocationPoint(GeoPoint locationPoint);
+	// nope GeoPoint findByLocationPoint(GeoPoint locationPoint);
 	
 //	Documentation for reference:
 //	

@@ -43,11 +43,13 @@ public class Controller {
             //String userId = searchFor.getUserId();
             //return repository.findByUserId(userId);
 		
-			List<LocationPointValue> ret = searchFor.getLocationPointValueList();
-            //GeoPoint locationPoint = searchFor.getLocationPointValueList();
-			GeoPoint locationPoint = new GeoPoint();
-            return repository.findByLocationPoint(locationPoint);
+			//???  List<LocationPointValue> ret = searchFor.getLocationPointValueList();
+            GeoPoint locationPoint = searchFor.getLocationPoint();
+			// dummy while trying list serialization GeoPoint locationPoint = new GeoPoint();
+            List<Metadata> forRet = repository.findByLocationPoint(locationPoint);
+            return forRet;
 	}
 	
+
 	
 }
